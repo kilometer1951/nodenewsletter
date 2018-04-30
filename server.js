@@ -60,12 +60,10 @@ app.route('/')
       
    });
 
+var port =process.env.PORT || 3000 ;
 
 
-app.listen(3000, (err) => {
-	if(err){
-		console.log(err);
-	}else{
-		console.log("Running on port 3000")
-	}
+app.listen(port, (err) => {
+  if (err) console.log(err);
+  console.log(`Running on port ${port}`);
 });
